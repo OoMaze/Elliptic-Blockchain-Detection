@@ -1,0 +1,24 @@
+DATASET:
+  BASE_DIR: './dataset/elliptic'
+  AUGMENT_DIR: './dataset/augment_elliptic'  # DATASET.AUGMENT_DIR (str): Path to the augmented dataset directory.
+  SEED: 42
+  TEST_RATIO: 0.2
+  
+  USE_AUGMENTSET: False   # DATASET.USE_AUGMENTSET (bool): Flag indicating whether to use augmented data. Default is False.
+  UNDIRECTED: False       
+TRAIN:
+  DEVICE: 'cuda:0' # or 'cpu'
+  TRAIN_MODE: True
+  MAX_EPOCH: 100
+  STEP: None
+
+MODEL:
+  MODEL_NAME: 'NET'
+  FL_LOSS: False
+  INPUT_DIM: 165
+  HID_DIM: 128
+
+BOOSTER:
+  F_ATT: True
+  SLICES: 3
+  NUM_LAYER: 1
